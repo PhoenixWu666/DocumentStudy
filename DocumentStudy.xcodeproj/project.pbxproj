@@ -9,23 +9,25 @@
 /* Begin PBXBuildFile section */
 		74157DC320DBBBDF004D9C5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74157DC220DBBBDF004D9C5E /* AppDelegate.swift */; };
 		74157DC520DBBBDF004D9C5E /* DocumentBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74157DC420DBBBDF004D9C5E /* DocumentBrowserViewController.swift */; };
-		74157DC720DBBBDF004D9C5E /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74157DC620DBBBDF004D9C5E /* DocumentViewController.swift */; };
-		74157DC920DBBBDF004D9C5E /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74157DC820DBBBDF004D9C5E /* Document.swift */; };
+		74157DC920DBBBDF004D9C5E /* StudyDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74157DC820DBBBDF004D9C5E /* StudyDocument.swift */; };
 		74157DCC20DBBBDF004D9C5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74157DCA20DBBBDF004D9C5E /* Main.storyboard */; };
 		74157DCE20DBBBE0004D9C5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74157DCD20DBBBE0004D9C5E /* Assets.xcassets */; };
 		74157DD120DBBBE0004D9C5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74157DCF20DBBBE0004D9C5E /* LaunchScreen.storyboard */; };
+		74157DD920DBC49C004D9C5E /* StudyDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74157DD820DBC49C004D9C5E /* StudyDataModel.swift */; };
+		74157DDB20DBC5BB004D9C5E /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74157DDA20DBC5BB004D9C5E /* EditorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		74157DBF20DBBBDF004D9C5E /* DocumentStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DocumentStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74157DC220DBBBDF004D9C5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74157DC420DBBBDF004D9C5E /* DocumentBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentBrowserViewController.swift; sourceTree = "<group>"; };
-		74157DC620DBBBDF004D9C5E /* DocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewController.swift; sourceTree = "<group>"; };
-		74157DC820DBBBDF004D9C5E /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		74157DC820DBBBDF004D9C5E /* StudyDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyDocument.swift; sourceTree = "<group>"; };
 		74157DCB20DBBBDF004D9C5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		74157DCD20DBBBE0004D9C5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74157DD020DBBBE0004D9C5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74157DD220DBBBE0004D9C5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74157DD820DBC49C004D9C5E /* StudyDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyDataModel.swift; sourceTree = "<group>"; };
+		74157DDA20DBC5BB004D9C5E /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +60,11 @@
 		74157DC120DBBBDF004D9C5E /* DocumentStudy */ = {
 			isa = PBXGroup;
 			children = (
+				74157DDA20DBC5BB004D9C5E /* EditorViewController.swift */,
+				74157DD820DBC49C004D9C5E /* StudyDataModel.swift */,
 				74157DC220DBBBDF004D9C5E /* AppDelegate.swift */,
 				74157DC420DBBBDF004D9C5E /* DocumentBrowserViewController.swift */,
-				74157DC620DBBBDF004D9C5E /* DocumentViewController.swift */,
-				74157DC820DBBBDF004D9C5E /* Document.swift */,
+				74157DC820DBBBDF004D9C5E /* StudyDocument.swift */,
 				74157DCA20DBBBDF004D9C5E /* Main.storyboard */,
 				74157DCD20DBBBE0004D9C5E /* Assets.xcassets */,
 				74157DCF20DBBBE0004D9C5E /* LaunchScreen.storyboard */,
@@ -80,6 +83,7 @@
 				74157DBB20DBBBDE004D9C5E /* Sources */,
 				74157DBC20DBBBDE004D9C5E /* Frameworks */,
 				74157DBD20DBBBDE004D9C5E /* Resources */,
+				74415D8520DBD52100757905 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -136,15 +140,32 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		74415D8520DBD52100757905 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "KEYWORDS=\"TODO:|FIXME:|\\?\\?\\?:|\\!\\!\\!:\"\nfind ${SRCROOT} \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -print0 | \\\nxargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | \\\nperl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		74157DBB20DBBBDE004D9C5E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74157DC920DBBBDF004D9C5E /* Document.swift in Sources */,
-				74157DC720DBBBDF004D9C5E /* DocumentViewController.swift in Sources */,
+				74157DC920DBBBDF004D9C5E /* StudyDocument.swift in Sources */,
 				74157DC520DBBBDF004D9C5E /* DocumentBrowserViewController.swift in Sources */,
 				74157DC320DBBBDF004D9C5E /* AppDelegate.swift in Sources */,
+				74157DDB20DBC5BB004D9C5E /* EditorViewController.swift in Sources */,
+				74157DD920DBC49C004D9C5E /* StudyDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
